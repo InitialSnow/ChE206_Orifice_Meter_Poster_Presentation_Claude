@@ -1,11 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Relative base: every built asset reference resolves against the page's own
-// URL, so the same build works unmodified whether it's served from a GitHub
-// Pages project URL (username.github.io/repo-name/), a user/org root page,
-// or opened directly as a local file.
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  // This repository is deployed at a project-site subpath on GitHub Pages.
+  // Use an explicit base so generated JS/CSS URLs cannot resolve from the domain root.
+  base: '/ChE206_Orifice_Meter_Poster_Presentation_Claude/',
 })
