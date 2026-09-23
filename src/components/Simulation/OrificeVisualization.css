@@ -1,0 +1,61 @@
+.orifice-viz {
+  padding: 20px 16px 16px;
+}
+
+.orifice-viz-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 6px;
+  margin-bottom: 8px;
+}
+
+.orifice-viz-head h3 {
+  font-size: 15px;
+  color: var(--text-0);
+}
+
+.orifice-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  touch-action: pan-y;
+}
+
+.orifice-svg-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: var(--text-2);
+}
+
+.orifice-svg-label-accent {
+  fill: var(--accent-soft);
+  font-weight: 600;
+}
+
+.orifice-eddy {
+  animation: eddy-spin 2.4s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes eddy-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orifice-viz-note {
+  margin-top: 10px;
+  padding: 0 6px;
+  font-size: 12px;
+  color: var(--text-2);
+  line-height: 1.55;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orifice-eddy {
+    animation: none;
+  }
+}

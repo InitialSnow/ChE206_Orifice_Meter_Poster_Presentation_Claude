@@ -1,0 +1,41 @@
+.simulation-section {
+  background: linear-gradient(180deg, var(--bg-0), var(--bg-1) 40%, var(--bg-0));
+}
+
+.sim-layout {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.sim-col-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sim-col-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.sim-charts {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 980px) {
+  .sim-layout {
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+  }
+
+  .sim-charts {
+    grid-template-columns: 1fr 1fr;
+  }
+}
